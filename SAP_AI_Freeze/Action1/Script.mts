@@ -12,14 +12,14 @@ mySendKey.SendKeys("~")
 AIUtil.Context.Freeze
 AIUtil("text_box", "Order Type").SetText "OR"
 AIUtil("text_box", "Sales Organization").SetText"1710"
-AIUtil("text_box", "Distribution Channel.").SetText "10"
+'AIUtil("text_box", "Distribution Channel.").SetText "10"
 AIUtil("text_box", "Division").SetText "00"
 AIUtil("button", "Continue").Click
 AIUtil.Context.UnFreeze
 
 'Complete the Sales Order
 AIUtil.Context.Freeze
-AIUtil("text_box", "Sold-To Party:").SetText "EWM17-CU02"
+AIUtil("text_box", "", micFromTop, 2).SetText "EWM17-CU02"
 AIUtil("text_box", "Ship-To Party:").SetText "EWM17-CU02"
 AIUtil("text_box", "Cust. Reference").SetText "450000019998"
 AIUtil("text_box", "Cust. Ref. Date").SetText "10/24/2022"
@@ -28,4 +28,4 @@ AIUtil("button", "Save").Click
 AIUtil.FindTextBlock("Exit").Click
 AIUtil.Context.UnFreeze
 
-'Add additional steps here for Material and Item #s
+
