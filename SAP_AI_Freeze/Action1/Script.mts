@@ -22,7 +22,7 @@ AIUtil.Context.Freeze
 AIUtil("text_box", "", micFromTop, 2).SetText "EWM17-CU02"
 AIUtil("text_box", "Ship-To Party:").SetText "EWM17-CU02"
 AIUtil("text_box", "Cust. Reference").SetText "450000019998"
-AIUtil("text_box", "Cust. Ref. Date").SetText "10/24/2022"
+AIUtil("text_box", "Cust. Ref. Date").SetText "10/26/2022"
 AIUtil("plus").Click
 AIUtil("button", "Save").Click
 AIUtil.FindTextBlock("Exit").Click
