@@ -18,7 +18,8 @@ AIUtil("text_box", "Division").SetText "00"
 AIUtil("button", "Continue").Click
 
 'Complete the Sales Order
-AIUtil("text_box", "Standard Order").SetText  "1234"
+orN = DataTable.Value("OrderNumber", "Global")
+AIUtil("text_box", "Standard Order").SetText  orN
 AIUtil("text_box", "", micFromTop, 2).SetText "EWM17-CU02"
 AIUtil("text_box", "Ship-To Pary: []:").SetText "EWM17-CU02"
 AIUtil("text_box", "Cust. Reference").SetText "450000019998"
