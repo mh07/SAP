@@ -10,10 +10,13 @@ Set mySendKey = CreateObject("WScript.shell")
 mySendKey.SendKeys("~") 
 
 'Start the Sales Order
+ If AIUtil("text_box", "Order Type").Exist Then
+ 	AIUtil("text_box", "Order Type").SetText "OR"
+ Else wait 2
+ End If
 AIUtil("text_box", "Order Type").SetText "OR"
-
 AIUtil("text_box", "Sales Organization").SetText "1710"
-AIUtil("text_box", "Distribution Channel.").SetText "10"
+AIUtil("text_box", micAnyText, micWithAnchorOnLeft, AIUtil.FindText("Distribution Channel")).SetText "10"
 AIUtil("text_box", "Division").SetText "00"
 AIUtil("button", "Continue").Click
 
@@ -21,13 +24,13 @@ AIUtil("button", "Continue").Click
 'orN = DataTable.Value("OrderNumber", "Global")
 AIUtil("text_box", "Standard Order").SetText Parameter("OrderInput")
 AIUtil("text_box", "", micFromTop, 2).SetText "EWM17-CU02"
-AIUtil("text_box", "Ship-To Pary: []:").SetText "EWM17-CU02"
+AIUtil("text_box", "Ship-To Party:").SetText "EWM17-CU02"
 AIUtil("text_box", "Cust. Reference").SetText "450000019998"
-AIUtil("text_box", "Cust. Ref. Date").SetText "10/26/2022"
+AIUtil("text_box", "Cust. Ref. Date").SetText "11/30/2022"
 AIUtil("plus").Click
 AIUtil("button", "Save").Click
 AIUtil.FindTextBlock("Exit").Click
-AIUtil.Context.UnFreeze
+
 
 
 
