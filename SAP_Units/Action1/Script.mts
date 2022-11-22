@@ -28,10 +28,9 @@ AIUtil("text_box", "Ship-To Party:").SetText "EWM17-CU02"
 AIUtil("text_box", "Cust. Reference").SetText "450000019998"
 AIUtil("text_box", "Cust. Ref. Date").SetText "11/30/2022"
 Parameter("SAP_OrderApproved")= "450000019998"
-AIUtil("plus").Click
 AIUtil("button", "Save").Click
 AIUtil.FindTextBlock("Exit").Click
-
+AIUtil.FindText("No").Click
 
 
 
