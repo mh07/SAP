@@ -17,6 +17,7 @@ SAP_Login=Action2\Script.mts
 SAP_Logout=Action3\Script.mts
 VA01_2=Action4\Script.mts
 VA01_3=Action5\Script.mts
+VA01_4=Action6\Script.mts
 
 [VuserProfiles]
 Profiles=Default Profile
@@ -76,3 +77,6 @@ Action4\ObjectRepository.bdb=
 Action5\Script.mts=
 Action5\Resource.mtr=
 Action5\ObjectRepository.bdb=
+Action6\Script.mts=
+Action6\Resource.mtr=
+Action6\ObjectRepository.bdb=
